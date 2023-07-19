@@ -1,0 +1,262 @@
+@media screen and (max-width: 850px) {
+
+  /*FOR WHEN THE WEBSITE TAB IS MADE SMALLER*/
+  * {
+    flex-wrap: wrap;
+  }
+
+  #index_columns_activities_id {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/*APPLIES TO EVERY SINGLE THING*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*APPLIES TO SELECT PARTS ON EVERY PAGE*/
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: #85586F;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  background-color: #F9F5F6;
+}
+
+header {
+  color: #85586F;
+  background-color: #F9F5F6;
+}
+
+main {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+p {
+  font-family: 'Press Start 2P', cursive;
+  color: #85586F;
+  padding-top: 1em;
+  padding-bottom: .4em;
+  margin-left: 2em;
+  margin-right: 2em;
+  text-align: left;
+  font-size: 80%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #85586F;
+  padding: .5em;
+
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+li a:hover {
+  background-color: #85586F;
+  color: #F9F5F6;
+}
+
+/*NAV BAR CLASSES AND IDS*/
+#nav_align_id {
+  text-align: center;
+}
+
+.nav_ul_class {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0.75em;
+}
+
+.nav_list_class {
+  display: inline-flex;
+  margin-top: .3em;
+  margin-bottom: .3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*INDEX CLASSES AND IDS*/
+#index_intro_main_id {
+  margin-left: 15%;
+  margin-right: 15%;
+
+  color: #85586F;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  line-height: 45px;
+}
+
+.index_ptext_main_class {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 1em;
+}
+
+.index_ptext_coloured_main_class {
+  color: #D0B8A8;
+}
+
+/*PUTTING THIS CODE AS A COMMENT SO IF I DECIDE TO USE IT I CAN SIMPLY REMOVE THE COMMENT MARKERS*/
+/*
+#index_selfie_align_main_id {
+  text-align: center;
+}
+
+#index_selfie_main_id {
+  max-width: 30%;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  border: 2px #D0B8A8;
+}
+
+#index_selfietext_main_id {
+  margin-bottom: 2em;
+  text-align: center;
+}
+*/
+
+#index_columns_activities_id {
+  column-count: 3;
+  display: inline-flex;
+  flex-basis: 100%;
+}
+
+#index_colums_align_activities_id {
+  text-align: center;
+}
+
+.index_border_activites_class {
+  border: 3px dashed #D0B8A8;
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  height: 19em;
+  width: 19em;
+  overflow: hidden;
+}
+
+.index_title_activities_class {
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-top: 1.6em;
+}
+
+.index_list_activities_class {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  list-style: none;
+  line-height: 22px;
+  margin-bottom: 1em;
+}
+
+/*PORTFOLIO CLASSES AND IDS*/
+.portfolio_column_activities_class{
+  column-count: 3;
+  margin-top: 10em;
+}
+.portfolio_column_content_activities_class {
+  margin: auto;
+  display: block;
+  max-width: 60em;
+  max-height: 45em;
+  overflow: hidden;
+}
+
+.portfolio_title_activites_class {
+  color: #85586F;
+  padding-bottom: 0.4em;
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.portfolio_img_activities_class {
+  padding: 1rem;
+  margin-bottom: 15px;
+  font-size: 4em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.portfolio_text_activities_class {
+  color: #85586F;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.portfolio_div_activities_class {
+  text-align: center;
+}
+
+#resume_main_id {
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: center;
+}
+
+#resume_h1_main_id {
+  margin: 0.8em;
+  text-align: center;
+}
+
+.resume_h3_main_class {
+  margin: 2em;
+  margin-bottom: 0.7em;
+  text-align: center;
+  text-decoration: underline dashed #D0B8A8;
+}
+
+.resume_h4_main_class {
+  margin: 0.3em;
+  text-align: center;
+  font-size: 75%;
+}
+
+.resume_ptext_main_class {
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.resume_ul_main_class {
+  text-align: center;
+  font-size: 12px;
+}
+
+#resume_ul_main_id {
+  text-align: center;
+  font-size: 15px;
+}
+
+.resume_ul_main_class li::before {
+  content: "#";
+  padding-right: 8px;
+  color: #D0B8A8;
+}
+
+#resume_ul_main_id li::before {
+  content: "#";
+  padding-right: 8px;
+  color: #D0B8A8;
