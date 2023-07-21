@@ -163,8 +163,16 @@ li a:hover {
   text-align: center;
   list-style: none;
   line-height: 22px;
+  font-size: 14px;
   margin-bottom: 1em;
 }
+
+.index_list_activities_class li::before {
+  content: "#";
+  padding-right: 8px;
+  color: #D0B8A8;
+}
+
 
 /*PORTFOLIO CLASSES AND IDS*/
 .portfolio_column_activities_class{
@@ -260,3 +268,4 @@ li a:hover {
   content: "#";
   padding-right: 8px;
   color: #D0B8A8;
+}
