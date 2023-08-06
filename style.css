@@ -1,20 +1,22 @@
 @media screen and (max-width: 850px) {
 
   /*FOR WHEN THE WEBSITE TAB IS MADE SMALLER*/
-  * { 
-    flex-wrap: wrap;
-    text-align: center;
+  * { flex-wrap: wrap;}
+  
+  main {
+    margin: 0;
+    padding: 1%;
   }
 
-   nav ul {
+  nav ul {
     margin: 0;
     padding-top: 0;
     padding-bottom: 0;
     flex-direction: column;
   }
 
-  nav li {
-    margin-right: 3%;
+  nav ul li {
+    margin-right: 10%;
     margin-bottom: 1%;
   }
 
@@ -28,7 +30,6 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
   }
-
 }
 
 /*APPLIES TO EVERY SINGLE THING*/
@@ -39,10 +40,8 @@
 
 /*APPLIES TO SELECT PARTS ON EVERY PAGE*/
 body {
-  background-color: #F9F5F6;
-  
+  background-image: linear-gradient( #F9F5F6,#F8EAD8);
   font-family: 'Press Start 2P', cursive;
-  font-size: 120%;
   color: #85586F;
   line-height: 20px;
   letter-spacing: 1.5px;
@@ -60,7 +59,8 @@ nav li {margin: 1em;}
 nav li a {
   color: #85586F;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
+  padding:10px;
 }
 
 nav ul {
@@ -68,35 +68,27 @@ nav ul {
   margin-right: auto;
   padding-top: 2em;
   padding-bottom: 2em;
-  background-color: #F9F5F6;
   text-align: center;
   list-style: none;
   justify-content: center;
   color: #85586F;
 }
 
-
-main {
-  margin-bottom: 1em;
-}
+main {margin-bottom: 1em;}
 
 p {
   padding-bottom: .4em;
   padding-top: 1em;
-  
   margin-left: 2em;
   margin-right: 2em;
-  
   font-size: 80%;
 }
 
 ul {list-style-type: none;}
 
 a {
-  padding: .5em;
   text-decoration: none;
   color: #85586F;
-
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
@@ -120,20 +112,19 @@ li a:hover {
   margin-left: auto;
   margin-right: auto;
   display: inline-flex;
-
 }
 
 /*INDEX CLASSES AND IDS*/
 #index_intro_main_id {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 
   color: #85586F;
   padding-top: .2em;
   padding-bottom: .2em;
   text-align: center;
   line-height: 45px;
-  font-size: 30px;
+  font-size: 25px;
   overflow: hidden;
   flex-wrap: wrap;
 }
@@ -142,6 +133,9 @@ li a:hover {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1em;
+
+  font-size:14px;
+  text-align:center;
 }
 
 .index_ptext_coloured_main_class {color: #D0B8A8;}
@@ -167,9 +161,11 @@ li a:hover {
 */
 
 #index_columns_activities_id {
-  column-count: 3; 
-  display: inline-flex; 
+  column-count: 3;
+  display: inline-flex;
   flex-basis: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #index_colums_align_activities_id {text-align: center;}
@@ -187,10 +183,8 @@ li a:hover {
 .index_title_activities_class {
   margin-bottom: 12px;
   margin-top: 1em;
-  
   padding: 1em;
   text-align: center;
-
   font-size: 1em;
 }
 
@@ -199,13 +193,11 @@ li a:hover {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 1em;
-  
   text-align: center;
   list-style: none;
   line-height: 22px;
   font-size: 13px;
 }
-
 
 .index_list_activities_class li::before {
   content: "#";
@@ -214,12 +206,15 @@ li a:hover {
 }
 
 
-
 /*PORTFOLIO CLASSES AND IDS*/
 .portfolio_column_activities_class{
-  column-count: 1;
-  margin-top: 2%;
+  column-count: 3;
+  display: inline-flex;
+  flex-basis: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+
 .portfolio_column_content_activities_class {
   margin: auto;
   display: inline;
@@ -237,9 +232,7 @@ li a:hover {
   transition: 0.3s;
 }
 
-
 .portfolio_title_activites_class:hover {color: #D0B8A8;}
-
 
 .portfolio_img_activities_class {
   padding: 0.5em;
