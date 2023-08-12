@@ -40,7 +40,7 @@
 
 /*APPLIES TO SELECT PARTS ON EVERY PAGE*/
 body {
-  background-image: linear-gradient( #F9F5F6,#F8EAD8);
+  background:#F9F5F6;
   font-family: 'Press Start 2P', cursive;
   color: #85586F;
   line-height: 20px;
@@ -216,11 +216,18 @@ li a:hover {
 }
 
 .portfolio_column_content_activities_class {
-  margin: auto;
-  display: inline;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
   max-width: 60em;
   max-height: 45em;
   overflow: hidden;
+}
+.portfolio_image_class{
+  width:75vh;
+  position:relative;
+  border:1px;
+  border-radius:3%;
 }
 
 .portfolio_title_activites_class {
@@ -234,12 +241,11 @@ li a:hover {
 
 .portfolio_title_activites_class:hover {color: #D0B8A8;}
 
+
 .portfolio_img_activities_class {
   padding: 0.5em;
   margin-bottom: 15px;
   font-size: 4em;
-  margin-left:auto;
-  margin-right:auto;
 }
 
 .portfolio_text_activities_class {
@@ -247,66 +253,18 @@ li a:hover {
   font-size: 15px;
   text-align: center;
   line-height: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-bottom: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 15%;
+  padding-bottom:20%;
+}
+.portfolio_noimg_text_activities_class{
+  color: #85586F;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .portfolio_div_activities_class {text-align: center;}
-/*RESUME*/
-#resume_main_id {
-  margin-right: 20%;
-  margin-left: 20%;
-  text-align: center;
-}
-
-#resume_h1_main_id {margin: 0.8em; text-align: center;}
-
-.resume_h3_main_class {
-  margin: 2em;
-  margin-bottom: 0.7em;
-  text-align: center;
-  text-decoration: underline dashed #D0B8A8;
-  transition: 0.3s;
-}
-
-.resume_h3_main_class:hover { 
-  color: #D0B8A8; 
-  text-decoration: underline dashed #85586F;
-}
-
-.resume_h4_main_class {
-  margin: 0.3em;
-  text-align: center;
-  font-size: 75%;
-}
-
-.resume_ptext_main_class {
-  text-align: center;
-  font-weight: 500;
-  font-size: 15px;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.resume_ul_main_class { 
-  text-align: center; 
-  font-size: 12px;
-}
-
-#resume_ul_main_id { 
-  text-align: center; 
-  font-size: 15px;
-}
-
-.resume_ul_main_class li::before {
-  content: "#";
-  padding-right: 8px;
-  color: #D0B8A8;
-}
-
-#resume_ul_main_id li::before {
-  content: "#";
-  padding-right: 8px;
-  color: #D0B8A8;
-}
