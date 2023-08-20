@@ -1,8 +1,10 @@
 @media screen and (max-width: 850px) {
 
   /*FOR WHEN THE WEBSITE TAB IS MADE SMALLER*/
-  * { flex-wrap: wrap;}
-  
+  * {
+    flex-wrap: wrap;
+  }
+
   main {
     margin: 0;
     padding: 1%;
@@ -25,42 +27,76 @@
     margin-right: auto;
   }
 
-  #index_columns_activities_id{
+  #index_columns_activities_id {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
   }
+
+  .portfolio_content_text_class .portfolio_image_class {
+    width: 60vh;
+    position: relative;
+    border: 1px;
+    border-radius: 3%;
+  }
+  
+    /* Place the timelime to the left */
+  .pj_timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .pj_timeline_content_class {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+
+  /* Make sure all circles are at the same spot */
+  .pj_timeline .left::after, .pj_timeline .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .pj_timeline .right {
+    left: 0%;
+  }
 }
 
 /*APPLIES TO EVERY SINGLE THING*/
-* { 
-  margin: 0; 
+* {
+  margin: 0;
   padding: 0;
 }
 
 /*APPLIES TO SELECT PARTS ON EVERY PAGE*/
 body {
-  background:#F9F5F6;
+  background: #F9F5F6;
   font-family: 'Press Start 2P', cursive;
   color: #85586F;
   line-height: 20px;
   letter-spacing: 1.5px;
 }
 
-header { 
+header {
   background-color: #F9F5F6;
-  color: #85586F; 
+  color: #85586F;
 }
 
-nav {display: inline;}
+nav {
+  display: inline;
+}
 
-nav li {margin: 1em;}
+nav li {
+  margin: 1em;
+}
 
 nav li a {
   color: #85586F;
   text-decoration: none;
   font-size: 17px;
-  padding:10px;
+  padding: 10px;
 }
 
 nav ul {
@@ -74,7 +110,9 @@ nav ul {
   color: #85586F;
 }
 
-main {margin-bottom: 1em;}
+main {
+  margin-bottom: 1em;
+}
 
 p {
   padding-bottom: .4em;
@@ -84,7 +122,9 @@ p {
   font-size: 80%;
 }
 
-ul {list-style-type: none;}
+ul {
+  list-style-type: none;
+}
 
 a {
   text-decoration: none;
@@ -94,13 +134,15 @@ a {
   transition-delay: 0s;
 }
 
-li a:hover { 
-  background-color: #85586F; 
+li a:hover {
+  background-color: #85586F;
   color: #F9F5F6;
 }
 
 /*NAV BAR CLASSES AND IDS*/
-#nav_align_id { text-align: center;}
+#nav_align_id {
+  text-align: center;
+}
 
 .nav_ul_class {
   padding: 0.75em;
@@ -113,6 +155,8 @@ li a:hover {
   margin-right: auto;
   display: inline-flex;
 }
+
+.active_nav_list_class{color: #D0B8A8;}
 
 /*INDEX CLASSES AND IDS*/
 #index_intro_main_id {
@@ -133,12 +177,15 @@ li a:hover {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1em;
+  margin-bottom: 1em;
 
-  font-size:14px;
-  text-align:center;
+  font-size: 14px;
+  text-align: center;
 }
 
-.index_ptext_coloured_main_class {color: #D0B8A8;}
+.index_ptext_coloured_main_class {
+  color: #D0B8A8;
+}
 
 /*PUTTING THIS CODE AS A COMMENT SO IF I DECIDE TO USE IT I CAN SIMPLY REMOVE THE COMMENT MARKERS*/
 /*
@@ -168,12 +215,14 @@ li a:hover {
   flex-wrap: wrap;
 }
 
-#index_colums_align_activities_id {text-align: center;}
+#index_colums_align_activities_id {
+  text-align: center;
+}
 
 .index_border_activites_class {
   margin-top: 2em;
   margin-left: 0.5em;
-  margin-right:0.5em;
+  margin-right: 0.5em;
   margin-bottom: 2em;
   border: 3px dashed #D0B8A8;
   height: 15em;
@@ -205,9 +254,18 @@ li a:hover {
   color: #D0B8A8;
 }
 
+.index-read-more-class{
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #D0B8A8;
+  color: #85586F;
+}
+.read-more-button-div{
+  text-align: center;
+}
 
 /*PORTFOLIO CLASSES AND IDS*/
-.portfolio_column_activities_class{
+.portfolio_column_activities_class {
   column-count: 3;
   display: inline-flex;
   flex-basis: 100%;
@@ -223,11 +281,12 @@ li a:hover {
   max-height: 45em;
   overflow: hidden;
 }
-.portfolio_image_class{
-  width:75vh;
-  position:relative;
-  border:1px;
-  border-radius:3%;
+
+.portfolio_image_class {
+  width: 75vh;
+  position: relative;
+  border: 1px;
+  border-radius: 3%;
 }
 
 .portfolio_title_activites_class {
@@ -239,7 +298,9 @@ li a:hover {
   transition: 0.3s;
 }
 
-.portfolio_title_activites_class:hover {color: #D0B8A8;}
+.portfolio_title_activites_class:hover {
+  color: #D0B8A8;
+}
 
 
 .portfolio_img_activities_class {
@@ -256,9 +317,10 @@ li a:hover {
   margin-left: 5%;
   margin-right: 5%;
   padding-top: 15%;
-  padding-bottom:20%;
+  padding-bottom: 20%;
 }
-.portfolio_noimg_text_activities_class{
+
+.portfolio_noimg_text_activities_class {
   color: #85586F;
   font-size: 15px;
   text-align: center;
@@ -267,4 +329,97 @@ li a:hover {
   margin-right: 5%;
 }
 
-.portfolio_div_activities_class {text-align: center;}
+.portfolio_div_activities_class {
+  text-align: center;
+}
+
+
+
+
+
+.pj_timeline_class {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.pj_timeline_class::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #D0B8A8;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.pj_timeline {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.pj_timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #D0B8A8;
+  border: 4px solid #85586F;
+  top: 15px;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  right: 6.6%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.pj_timeline_content_class {
+  padding: 20px 30px;
+  position: relative;
+  border: 4px dashed #85586F;
+  margin:3%;
+}
+
+
+.pj_timeline_h2 {
+  font-size: 23px;
+  text-align: center;
+  margin: 10px;
+}
+
+.pj_timeline_h3 {
+  font-size: 17px;
+  text-align: center;
+  margin: 10px;
+}
+
+.pj_timeline_h5_left{
+  font-size: 12px;
+  text-align: right;
+}
+
+.pj_timeline_h5_right{
+  font-size: 12px;
+  text-align: left;
+}
