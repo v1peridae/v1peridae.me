@@ -39,29 +39,6 @@
     border: 1px;
     border-radius: 3%;
   }
-  
-    /* Place the timelime to the left */
-  .pj_timeline::after {
-    left: 31px;
-  }
-
-  /* Full-width containers */
-  .pj_timeline_content_class {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-
-  /* Make sure all circles are at the same spot */
-  .pj_timeline .left::after, .pj_timeline .right::after {
-    left: 15px;
-  }
-
-  /* Make all right containers behave like the left ones */
-  .pj_timeline .right {
-    left: 0%;
-  }
 }
 
 /*APPLIES TO EVERY SINGLE THING*/
@@ -259,6 +236,7 @@ li a:hover {
   font-family: 'Press Start 2P', cursive;
   background-color: #D0B8A8;
   color: #85586F;
+  border: 4px dashed #85586F ;
 }
 .read-more-button-div{
   text-align: center;
