@@ -290,6 +290,7 @@ button {
   position: relative;
   border: 1px;
   border-radius: 3%;
+  margin-left: 2em;
 }
 
 .portfolio_title_activites_class {
