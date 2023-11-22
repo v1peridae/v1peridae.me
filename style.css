@@ -118,6 +118,26 @@ li a:hover {
 button {
   cursor: pointer; /*cursor changes to a hand when hovering over the button*/
 }
+/*UNIVERSAL/APPLIES ON ALL PAGES CLASSES AND IDS*/
+.social_list_class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding-bottom: 40px;
+}
+
+.social_list_class li a {
+  padding: 10px;
+  margin: 15px;
+  background-color: #f9f5f6;
+  color: #85586f;
+  font-size: 12px;
+}
+
+.social_list_class li a:hover {
+  text-decoration: underline;
+}
 
 /*NAV BAR CLASSES AND IDS*/
 #nav_align_id {
