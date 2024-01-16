@@ -115,6 +115,30 @@ li a:hover {
   color: #f9f5f6;
 }
 
+button {
+  cursor: pointer; /*cursor changes to a hand when hovering over the button*/
+}
+/*UNIVERSAL/APPLIES ON ALL PAGES CLASSES AND IDS*/
+.social_list_class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding-bottom: 40px;
+}
+
+.social_list_class li a {
+  padding: 10px;
+  margin: 15px;
+  background-color: #f9f5f6;
+  color: #85586f;
+  font-size: 12px;
+}
+
+.social_list_class li a:hover {
+  text-decoration: underline;
+}
+
 /*NAV BAR CLASSES AND IDS*/
 #nav_align_id {
   text-align: center;
@@ -137,7 +161,8 @@ li a:hover {
 }
 
 /*INDEX CLASSES AND IDS*/
-#index_intro_main_id {
+#index_intro_main_id,
+#contact_h1_main_id {
   margin-left: 5%;
   margin-right: 5%;
 
@@ -265,6 +290,7 @@ li a:hover {
   position: relative;
   border: 1px;
   border-radius: 3%;
+  margin-left: 2em;
 }
 
 .portfolio_title_activites_class {
