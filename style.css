@@ -4,39 +4,102 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "MS ui gothic";
+}
+
 body {
-  background-image: url("http://dl10.glitter-graphics.net/pub/590/590940trx4idmwj8.gif");
-  background-attachment: fixed;
-  background-repeat: repeat;
+  background-image: url("assets/blue_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "MS ui gothic";
 }
 
-.center {
+header {
+  font-style: normal;
+  margin: 3em;
+}
+header h1 {
+  font-family: "MS ui gothic";
+  color: black;
   text-align: center;
-  margin: 20%;
-  background-color: whitesmoke;
-  border-width: 9px;
+}
+
+.navbar {
   border-style: solid;
-  border-image: url("https://cdn.discordapp.com/attachments/904308736712138793/995929957790388284/image_copy.png")
-    7 fill round;
-}
-
-#header-p {
-  font-family: Verdana;
-  font-size: 40px;
-  color: deeppink;
-  text-shadow: 20px white;
-}
-
-.nav {
-  width: 22%;
-  border-style: ridge;
-  border-color: pink;
+  border-color: cadetblue;
   margin-left: 5px;
   background: white;
-  overflow: hidden;
   position: relative;
+  margin-bottom: 10px;
 }
 
+.navheader {
+  font-style: normal;
+  letter-spacing: 2px;
+  background-color: cadetblue;
+  color: whitesmoke;
+  padding: 5px;
+}
+
+.navbody ul {
+  list-style: none;
+  border-style: solid;
+  border-color: cadetblue;
+  margin: 20px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.navbody li {
+  font-size: 20px;
+  padding: 5px;
+  text-align: left;
+}
+.navbody li a {
+  text-decoration: none;
+  color: cadetblue;
+}
+.navbody li::before {
+  content: url(assets/xb05-icon-arrow.gif);
+  padding-right: 5px;
+}
 .container {
-  display: block;
+  margin: 10%;
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main {
+  width: 70%;
+  border-style: ridge;
+  border-color: #5f9ea0;
+  margin-left: 15px;
+  background: white;
+  margin-right: 15px;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 10px;
+}
+
+.movingbottomstuff {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
 }
