@@ -49,8 +49,6 @@ nav a {
 nav li {
   padding: 1px;
   text-align: left;
-
-
 }
 
 nav li::before {
@@ -167,9 +165,17 @@ nav h3 {
 
 .unfinished {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   padding: 10px;
   justify-content: space-around;
   align-items: center;
+}
+
+.unfinished p {
+  margin-bottom: 10px;
+}
+
+.unfinished img {
+  margin-top: 5px;
 }
