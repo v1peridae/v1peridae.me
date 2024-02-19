@@ -11,6 +11,7 @@ html {
 
 body {
   background-image: url("assets/wp11582889-blue-pixel-wallpapers.png");
+  background-repeat: no-repeat;
   background-size: 1920px;
   background-position: center;
   font-family: "MS ui gothic";
@@ -28,17 +29,41 @@ ul {
   align-items: flex-start;
   justify-content: center;
   margin: 10%;
+  margin-top: 5%;
 }
 
 nav {
   border: 1px solid rgba(190, 187, 187, 0.61);
   padding: 7px;
   margin-bottom: 20px;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.699);
+  text-decoration: none;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+nav li {
+  padding: 1px;
+  text-align: left;
+
+
+}
+
+nav li::before {
+  content: "⇢";
+  color: white;
+  padding-right: 8px;
+  padding-left: 20px;
 }
 
 nav h3 {
+  text-align: center;
   padding: 8px;
+  text-decoration: underline;
 }
 
 .updatelog {
@@ -50,6 +75,7 @@ nav h3 {
 
 .updatelog h3 {
   padding: 8px;
+  text-decoration: underline;
 }
 
 .rightbox {
@@ -72,7 +98,7 @@ nav h3 {
   padding: 10px;
   margin: 10px;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.473);
+  background-color: rgba(0, 0, 0, 0.699);
 }
 
 .centertwo {
