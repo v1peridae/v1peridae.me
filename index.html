@@ -1,95 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-  <title>home | viperidae</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-  <!-- link the webpage's stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- link the webpage's JavaScript file -->
-  <script src="/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home | v1peridae</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="center">
+    <!--RIGHTBOX-->
+    <div class="rightbox">
+      <nav>
+        <!--NAVIGATION-->
+        <h3>directory</h3>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about-me.html">about</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="photography.html">photography</a></li>
+          <li><a href="https://v1peridae.123guestbook.com">guestbook</a></li>
+        </ul>
+      </nav>
 
-  <nav>
-    <div id="nav_align_id">
-      <ul class="nav_ul_class">
-        <li class="nav_list_class"><a href="portfolio.html" class="active_nav_list_class">home</a></li>
-        <li class="nav_list_class"><a href="portfolio.html">portfolio</a></li>
-        <li class="nav_list_class"><a href="about-me.html">about me</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <h1 id="index_intro_main_id">Hey! I'm <a class="index_ptext_coloured_main_class">Louisa </a>and this is my
-      little corner of the interwebs, welcome!</h1>
-    <section>
-      <p class="index_ptext_main_class">I’m a current high-schooler from Eastern Africa, who's really interested in <a
-          class="index_ptext_coloured_main_class">artificial intelligence</a>, <a
-          class="index_ptext_coloured_main_class"> data science</a>, <a class="index_ptext_coloured_main_class">web and
-          game development</a> and <a class="index_ptext_coloured_main_class">cloud
-          computing</a>! I've been hooked on tech since forever, and I now
-        spend my time coding and designing awesome websites that look pretty cool and work even cooler!</p>
-      <div class="read-more-button-div">
-        <button onclick="window.location.href='about-me.html';" class="index-read-more-class">
-          Read more
-        </button>
+      <!--STATUS-->
+      <div class="updatelog">
+        <h3>update log</h3>
+        <p class="updatelogp">feb 21 2024 - revamped the entire website and this version is now currently online.</p>
       </div>
-      <!--
-    <div id="index_selfie_align_main_id">
-          I don't have an image I want to use yet 
-    <img id="index_selfie_main_id" src="" alt="" title="">
-      <p id="index_selfietext_main_id"></p>
-    </div>
--->
-      <section>
-        <div id="index_colums_align_activities_id">
-          <div id="index_columns_activities_id">
-            <div class="index_border_activites_class">
 
-              <h3 class="index_title_activities_class">Fun Facts About Me :0</h3>
-              <ul class="index_list_activities_class">
-                <li>I'm homeschooled</li>
-                <li>I've been programming since I was 11!</li>
-              </ul>
+      <div class="inspo">
+        <h3>my inspo</h3>
+        <a href="https://sadgrl.online/" target="_blank"><img
+            src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif"></a>
+        <a href="https://0oxo0.neocities.org/" target="_blank"><img src="https://0oxo0.neocities.org/0oxo0.gif"
+            width="88px"></a>
+        <a href="https://4disease.neocities.org"><img src="https://4disease.neocities.org/static/img/dizzy.gif"></a>
+        <a href="https://www.melody.my.id/" target="_blank"><img
+            src="https://melodies.neocities.org/image/button/melody.png"></a>
+        <a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+      </div>
+
+    </div>
+
+    <!--MAIN-->
+    <main>
+      <!--MAIN PARAGRAPH-->
+      <div class="centerbox">
+        <div class="centerone">
+          <p> hii my name is louisa and I'm a homeschooled teen super into coding. this is my small digital
+            space
+            where
+            i create experiment with html and attempt to make a cozy corner for myself on the internet (shoutout to the
+            super specific stackflow and reddit posts that have helped me solve 90% of the issues i've had). this
+            website
+            is
+            still a work in progress so future updates are gonna be rolled in. if you'd like to a lil more about me, you
+            can
+            checkout my <a href="about-me.html">about me</a> page.</p><br>
+          <p>Before you leave feel free to sign my guestbook and leave a comment or any question.</p><br>
+
+
+        </div>
+
+        <!--CURRENTLY-->
+        <div class="centerthree">
+          <h3 class="current-header">currently</h3>
+          <ul>
+            <li>listening to: c418 - ki </li>
+            <li>coding: data analysis and visualisation project for a competition</li>
+            <li>crochetting: a blanket</li>
+            <li>playing: gris</li>
+          </ul>
+        </div>
+
+        <!--PROJECTS-->
+        <div class="centertwo">
+          <div class="projects">
+            <div class="completedprojects">
+              <h3>notable completed projects</h3>
+              <p class="project-titles"><a href="https://github.com/v1peridae/btsv-countdown">across the spider-verse
+                  countdown</a></p>
+              <p class="project-desc">this is a counter that counts how many days that are left until the
+                release of the spider-man: across the spider-verse movie!</p>
+
+              <p class="project-titles"><a href="https://github.com/v1peridae/hackathon-website-allearn">allearn</a></p>
+              <p class="project-desc">this is a project i together with a friend worked on to offer resources to
+                students to learn .</p>
+
+              <p class="project-titles"><a href="https://github.com/v1peridae/ssv-website">(content warning) ssv</a>
+              </p>
+              <p class="project-desc">this is a projected i worked on to offer resources to give information on [will
+                add some form of "spoiler tag" here]. </p>
             </div>
 
-            <div class="index_border_activites_class">
+            <div class="incompleteprojects">
+              <h3>notable projects in progress</h3>
+              <p class="project-titles"><a href="https://github.com/v1peridae/project-period">project period!</a></p>
+              <p class="project-desc">this is a website i am working on for a project i founded and run
+                called project period!</p>
 
-              <h3 class="index_title_activities_class">Programming Languages</h3>
-              <ul class="index_list_activities_class">
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>HTML/CSS</li>
-              </ul>
+              <p class="project-titles"><a href="https://github.com/v1peridae/DataCampScolarshipCode">datacamp
+                  datascience
+                  competition</a></p>
+              <p class="project-desc">top secret project i am working on for my datacamp datascience
+                submission...stay tuned until it goes online!</p>
+            </div>
+
+            <div class="completedprojectsbtext">
+              <p>
+                if you'd love to see more of my work, feel free to check out my <a
+                  href="https://github.com/v1peridae">github</a> page.</p>
+
             </div>
 
           </div>
         </div>
-      </section>
-  </main>
+        <div class="blinkies">
+          <div class="bottomblinkies">
+            <img src="assets\bestviewedcomp.gif">
+            <img src="assets\int_explorer.gif">
+            <img src="assets\win95.gif">
+            <img src="assets\jquery.gif">
+            <img src="assets\noweb32.gif">
+            <img src="assets\emacs.gif">
+            <img src="assets\notepad-logo3.gif">
+            <img src="assets\html.gif">
+          </div>
+        </div>
+    </main>
 
-  <footer>
-    <ul class="social_list_class">
-      <li><a href="https://www.instagram.com/v1peridae">Instagram</a></li>
-      <li><a href="https://www.github.com/v1peridae">Github</a></li>
-      <li><a href="https://discord.com/users/930765087583633468">Discord</a></li>
-    </ul>
-  </footer>
+  </div>
+
 </body>
+
 
 </html>
