@@ -76,6 +76,10 @@ nav h3 {
   text-decoration: underline;
 }
 
+.updatelogp {
+  margin-top: 5px;
+}
+
 .rightbox {
   padding: 5px;
   margin: 10px;
@@ -154,7 +158,8 @@ nav h3 {
 }
 
 .completedprojects h3,
-.incompleteprojects h3 {
+.incompleteprojects h3,
+.current-header {
   padding: 8px;
   text-decoration: underline;
 }
