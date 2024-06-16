@@ -76,8 +76,9 @@ nav h3 {
   text-decoration: underline;
 }
 
-.updatelogp {
+.updatelog p {
   margin-top: 5px;
+  font-size: 14px;
 }
 
 .rightbox {
@@ -183,4 +184,19 @@ nav h3 {
 
 .unfinished img {
   margin-top: 5px;
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.photo {
+  padding: 20px;
+  flex-direction: column;
 }
