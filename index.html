@@ -18,7 +18,7 @@
     };
 
     function fetchLastFmTrack() {
-      const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=$louisaluvr&api_key=$134aa9173c138821e904d869bc021a4c&limit=1&format=json`;
+      const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=louisaluvr&api_key=134aa9173c138821e904d869bc021a4c&limit=1&format=json`;
 
       fetch(apiUrl)
         .then(response => response.json())
