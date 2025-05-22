@@ -7,13 +7,87 @@
   <title>home | v1peridae</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/style.css">
 
+  <script>
+
+
+    window.onload = function () {
+      fetchLastFmTrack();
+      fetchLatestCommit();
+    };
+
+    function fetchLastFmTrack() {
+      const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=$louisaluvr&api_key=$f7de601d58e1afdaea2b486fe119e71b&limit=1&format=json`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const trackElement = document.getElementById('currently-playing');
+
+          if (data.recenttracks && data.recenttracks.track && data.recenttracks.track.length > 0) {
+            const track = data.recenttracks.track[0];
+
+            const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+
+            if (isPlaying) {
+              const artist = track.artist['#text'];
+              const trackName = track.name;
+              trackElement.textContent = `${artist} - ${trackName}`;
+            } else {
+              trackElement.textContent = 'not currently playing';
+            }
+          } else {
+            trackElement.textContent = 'not currently playing';
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching Last.fm data:', error);
+          document.getElementById('currently-playing').textContent = 'not connected';
+        });
+    }
+
+    function fetchLatestCommit() {
+
+      fetch(`https://api.github.com/repos/v1peridae/v1peridae.me/commits?per_page=1`)
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.length > 0) {
+            const commit = data[0];
+            const message = commit.commit.message;
+            const date = new Date(commit.commit.author.date);
+
+            const options = { month: 'long', year: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+
+            document.getElementById('update-message').textContent = `${formattedDate} - ${message}`;
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching commit data:', error);
+        });
+
+      fetch(`https://api.github.com/users/v1peridae/events?per_page=10`)
+        .then(response => response.json())
+        .then(events => {
+          const pushEvents = events.filter(event => event.type === 'PushEvent');
+
+          if (pushEvents.length > 0) {
+            const latestEvent = pushEvents[0];
+            const repoName = latestEvent.repo.name.split('/')[1];
+            const repoUrl = `https://github.com/v1peridae/${repoName}`;
+
+            const codingElement = document.getElementById('currently-coding');
+            codingElement.innerHTML = `<a href="${repoUrl}" target="_blank">${repoName}</a>`;
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching GitHub activity:', error);
+        });
+    }
+
+    setInterval(fetchLastFmTrack, 20000);
+  </script>
 </head>
 
 <body>
@@ -22,7 +96,7 @@
     <div class="rightbox">
       <nav>
         <!--NAVIGATION-->
-        <h3>directory</h3>
+        <h3>✩ directory ✩</h3>
         <ul>
           <li><a href="index.html">home</a></li>
           <li><a href="about-me.html">about</a></li>
@@ -31,12 +105,12 @@
 
       <!--STATUS-->
       <div class="updatelog">
-        <h3><a href="update-log.html">update log</a></h3>
-        <p>august 2024 - removed pictures, made and added posts to blog, added update log page</p>
+        <h3><a href="https://github.com/v1peridae/v1peridae.me/commits/main">✧ update log ✧</a></h3>
+        <p id="update-message">ur not supposed to see this text...should be gone in a sec</p>
       </div>
 
       <div class="inspo">
-        <h3>my inspo</h3>
+        <h3>⋆⭒˚｡⋆ my inspo ⋆｡˚⭒⋆</h3>
         <a href="https://sadgrl.online/" target="_blank"><img
             src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif"></a>
         <a href="https://0oxo0.neocities.org/" target="_blank"><img src="https://0oxo0.neocities.org/0oxo0.gif"
@@ -48,6 +122,14 @@
             alt="Eric Experiment" /></a>
       </div>
 
+      <div class="socials">
+        <h3>୨୧ my socials ୨୧</h3>
+        <ul>
+          <li><a href="https://instagram.com/v1peridae" target="_blank">instagram</a></li>
+          <li><a href="https://pinterest.com/v1perid4e" target="_blank">pinterest</a></li>
+          <li><a href="https://letterboxd.com/v1peridae" target="_blank">letterboxd</a></li>
+        </ul>
+      </div>
 
     </div>
 
@@ -66,84 +148,50 @@
             still a work in progress so future updates are gonna be rolled in. if you'd like to a lil more about me, you
             can
             checkout my <a href="about-me.html">about me</a> page.</p><br>
+        </div>
 
+        <!-- Quick About Me Highlights -->
+        <div class="about-highlights">
+          <h3>✿ idk what to call this ✿</h3>
+          <ul class="highlight-list">
+            <li><span class="highlight-label">location:</span> currently based in nairobi!</li>
+            <li><span class="highlight-label">interests:</span> aviation and transportation in general, coding, watching
+              movies only to put them on my letterboxd, niche youtube video essays with 30 views and ATTEMPTING hardware
+              stuff</li>
+            <li><span class="highlight-label">learning:</span> rust :sob: </li>
+            <li><span class="highlight-label">fav games:</span> overwatch, msfs, cyberpunk 2077 </li>
+          </ul>
         </div>
 
         <!--CURRENTLY-->
         <div class="centerthree">
-          <h3 class="current-header">currently</h3>
+          <h3 class="current-header">✿ currently ✿</h3>
           <ul>
-            <li>listening to: alice in chains - would? </li>
-            <li>coding: dress to impress</li>
+            <li>listening to: <span id="currently-playing">loading...</span></li>
+            <li>coding: <span id="currently-coding">dress to impress</span></li>
           </ul>
         </div>
 
-        <!--PROJECTS-->
-        <div class="centertwo">
-          <div class="projects">
-            <div class="completedprojects">
-
-              <h3>notable completed projects</h3>
-
-              <p class="project-titles"><a href="https://projectperiod-ke.github.io/">project period!
-                  website</a></p>
-              <p class="project-desc">i run a community project that focuses educate girls aged 12+ on puberty and offer
-                a support system for them. so this is a website i made to introduce the idea to anyone who might not be
-                familiar with the project.</p>
-
-              <p class="project-titles"><a href="https://github.com/v1peridae/hacker-card-pcb">hacker card</a>
-              </p>
-              <p class="project-desc">my very cool nfc-powered "business" card i made as my first pcb project (shout out
-                to hackclub :D).</p>
-
-              <p class="project-titles"><a href="https://github.com/v1peridae/bedroom-light-automation/">arduino lights
-                  switch</a>
-              </p>
-              <p class="project-desc"> this is a light switch i made that automatically switches on/off your lights when
-                you get into / out of a room. </p>
-
-              <p class="project-titles"><a href="https://huggingface.co/spaces/v1peridae/RizzlerGPT-v1">rizzlergpt</a>
-              </p>
-              <p class="project-desc"> the skibidiest gpt out there.</p>
-
-              <p class="project-titles"><a href="https://stopsexualviolence.netlify.app/">(content warning)
-                  ssv </a></p>
-              <p class="project-desc">a safe space that offers resources to give information on sexual violence.</p>
-
-              <p class="project-titles"><a href="https://hackadoro.netlify.app/">hackadoro</a></p>
-              <p class="project-desc">a cute little multi-feature pomodoro timer i made that lets you set goals, listen
-                to relaxing music and write notes. first time i played around with react lol. </p>
-
-              <p class="project-titles"><a href="https://jurnl-app.netlify.app/">jurnl</a></p>
-              <p class="project-desc">a simple online journal, or should i say jurnl.</p>
-            </div>
-
-
-            <br>
-            <br>
-            <div class="completedprojectsbtext">
-              <p>
-                if you'd love to see more of my work, feel free to check out my <a
-                  href="https://github.com/v1peridae">github</a> page.</p>
-
-            </div>
-
-          </div>
+        <div class="github-section">
+          <p>✧ check out my <a href="https://github.com/v1peridae">github</a> for more projects! ✧</p>
         </div>
+
         <div class="blinkies">
           <div class="bottomblinkies">
-            <img src="assets\int_explorer.gif">
-            <img src="assets\win95.gif">
-            <img src="assets\jquery.gif">
-            <a href="https://yesterweb.org/no-to-web3/"><img src="assets\noweb32.gif"></a>
-            <img src="assets\emacs.gif">
+            <img src="assets\bestviewedcomp.gif">
             <img src="assets\notepad-logo3.gif">
+            <img src="assets\int_explorer.gif">
+            <img src="assets/netno.gif">
+            <img src="assets\leave.gif">
+            <img src="assets/fuckingwebmaster.gif">
+            <img src="assets/hillhouse-riversea.png">
+
             <a
               href="https://www.reddit.com/r/learnprogramming/comments/u2it0j/best_place_to_learn_html_css_fundamentals/"><img
                 src="assets\html.gif"></a>
           </div>
           <iframe
-            src="https://webring.phthallo.com/api/widgets/3?format=image&style=background-color:#00000000;border:none;font-family:'MS+ui+gothic';" />
+            src="https://webring.phthallo.com/api/widgets/3?format=image&style=background-color:#0000000;border:none;font-family:'MS+ui+gothic';width:200px;" />
         </div>
       </div>
     </main>

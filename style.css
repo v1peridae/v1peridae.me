@@ -123,6 +123,20 @@ nav h3 {
   align-items: center;
 }
 
+.bottomblinkies {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.bottomblinkies img {
+  max-width: 100%;
+  height: auto;
+}
+
 .inspo {
   border: 1px solid rgba(190, 187, 187, 0.61);
   padding: 7px;
@@ -223,6 +237,36 @@ nav h3 {
   padding-top: 8px;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.socials {
+  border: 1px solid rgba(190, 187, 187, 0.61);
+  padding: 7px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.698);
+}
+
+.socials h3 {
+  padding: 8px;
+  text-decoration: underline;
+}
+
+.socials ul {
+  margin-top: 5px;
+}
+
+.socials li {
+  padding: 3px;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: rgb(92, 167, 236);
 }
 
 /* Add these media queries at the end of the file */
@@ -349,4 +393,40 @@ iframe {
 
 a {
   font-family: "MS ui gothic";
+}
+
+.about-highlights {
+  border: 1px solid rgba(190, 187, 187, 0.61);
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.699);
+}
+
+.about-highlights h3 {
+  padding: 8px;
+  text-decoration: underline;
+}
+
+.highlight-list {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.highlight-list li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.highlight-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.github-section {
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid rgba(190, 187, 187, 0.61);
+  background-color: rgba(0, 0, 0, 0.699);
 }
