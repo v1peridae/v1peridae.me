@@ -70,7 +70,10 @@
       fetch(`https://api.github.com/users/v1peridae/events?per_page=10`)
         .then(response => response.json())
         .then(events => {
-          const pushEvents = events.filter(event => event.type === 'PushEvent');
+          const pushEvents = events.filter(event =>
+            event.type === 'PushEvent' &&
+            event.repo.name !== 'v1peridae/v1peridae'
+          );
 
           if (pushEvents.length > 0) {
             const latestEvent = pushEvents[0];
@@ -168,7 +171,7 @@
           <h3 class="current-header">✿ currently ✿</h3>
           <ul>
             <li>listening to: <span id="currently-playing">loading...</span></li>
-            <li>coding: <span id="currently-coding">dress to impress</span></li>
+            <li>coding: <span id="currently-coding">loading...</span></li>
           </ul>
         </div>
 
