@@ -3,34 +3,31 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>	
-	<div class="fixed inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('./src/assets/home_bg.png');">
-		<a href="/tapped.jpg"><img src = "./src/assets/bug_2.png" class="absolute -top-40 left-50 z-20 w-90 h-auto transform -rotate-[40deg] bug-shake"></a>
-		<a href="https://www.youtube.com/watch?v=Hu0ewWPKLkY"><img src = "./src/assets/bug_1.png" class="absolute -bottom-24 right-60 z-20 w-82 h-auto transform -rotate-[160deg] bug-shake"></a>
+	<div class="fixed inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('./src/assets/about_bg.png');">
 		<div class="h-screen w-screen flex items-center justify-center relative z-10 text-[#4C4B46]">
-			<img src="./src/assets/home_box.png" class="transform rotate-[6.7deg] w-auto max-h-[100%]" />
-			<div class="absolute inset-0 flex items-center justify-center z-30 ml-6">
-				<div class="transform rotate-[8.5deg] text-center px-8 py-12 pt-0 mt-0 max-w-[400px]" >
-					<h1 class="text-4xl font-avara underline mb-3 text-[#4C4B46] text-left pl-6 pt-0 mt-0 leading-relaxed">
-						v1peridae's asylum
-					</h1>
-					<nav class="mb-4 text-left">
-						<ul class="space-y-1 font-syne-mono text-2xl text-left pl-6 list-none">
-							<li class="underline">home</li>
-							<li> about</li>
-							<li> coding & related</li>
-							<li> random thoughts</li>
-						</ul>
-						</nav>
-
+			<img src="./src/assets/envelope.png" class="transform rotate-[6.7deg] w-auto max-h-[100%]" />
+			<div class="absolute inset-0 flex items-center justify-center z-30 ">
+				<div class="transform rotate-[7.0deg] text-center px-8 pt-30 mt-0 max-w-[500px]" >
 						<div class="text-lg font-syne-mono leading-5">
-							<p class="mb-6">
-								hi, i’m lou! i’m a 17-year-old based in nairobi, kenya. 
-								i’m a homeschooled senior and i do a lil bit of stuff for <a href="https://hackclub.com" class="underline text-[#4C4B46]">@hackclub</a> outside that. 
-								i also like talking to my <a href="/friends" class="underline text-[#4C4B46]">friends</a> who you should all meet! 
-								on this website, I hope to share my internet findings, and express my thoughts, ideas and opinions on various topics.  
-							</p>
+							<p class="mb-3">
+								hi again! i’m louisa (but people call me lou). 
+								i’m not really good at describing myself but here are some stuff i like 
+								(please talk to me about these, i'd love to chat!):
+								</p>
+								<ul class="list-decimal list-inside text-left pl-6">
+									<li>maths</li>
+									<li>coding; esp. web dev + design</li>
+									<li>old & obscure internet culture</li>
+									<li>music!</li>
+									<li>movies (really anything)</li>
+									<li>reading :)</li>
+									<li>the early 2000s + 2010s</li>
+									<li>hiking</li>
+								</ul>
+								</p>
 
 				</div>
 		</div>
+		<img src="./src/assets/road.png" class="absolute bottom-0 right-0 w-auto h-auto max-h-[500px] z-20" />
 	</div>
 </Layout>
