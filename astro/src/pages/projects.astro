@@ -1,23 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import birbAudio from '../assets/birb.mp3'
 ---
 
 <Layout>	
 	<div class="fixed inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('./src/assets/projects_bg.png');">
 		<div class="h-screen w-screen flex items-center justify-center relative z-10 text-[#4C4B46]">
-			<img src="./src/assets/book.png" class="w-auto max-h-[80%] relative left-[-130px] top-[-50px]" />
-			<div class="absolute inset-0 flex items-center justify-center z-30 ">
-				<div class="text-center px-8 pt-30 mt-0 max-w-[500px]" >
-						<div class="text-lg font-syne-mono leading-5">
-							<h1>projects</h1>
-							<p><a href="https://github.com/v1peridae/yubidnb">yubidnb:</a> makes every unique yubikey otp into a unique dnb track! </p>
-							<p><a href="https://github.com/v1peridae/delist">delist:</a> a social book recording website i built!</p>
-							<p><a href="https://github.com/v1peridae/delist">delist:</a> a social book recording website i built!</p>
-
-							
-
+			<div class="relative">
+				<img src="./src/assets/book.png" class="w-auto max-h-[80%] relative left-[-130px] top-[-50px]" />
+				
+				<div class="absolute top-[0%] -left-[4%] w-[35%] h-[60%] z-30">
+					<div class="text-lg font-syne-mono leading-5 text-left">
+						<h1 class="text-center font-avara text-4xl underline mb-4">projects</h1>
+						<p class="mb-2"><a href="https://github.com/v1peridae/yubidnb" class="underline">yubidnb:</a> makes every unique yubikey otp into a unique dnb track!</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/retro" class="underline">rewind:</a> a ysws (you ship, we ship) program i ran while interning (@hackclub).</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/jua" class="underline">jua:</a> the biggest all girls' hackathon in my region which i happen to have hosted (@hackclub)</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/counterspell" class="underline">counterspell:</a> vibes-based game jam which i also organised (@hackclub).</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/lyla" class="underline">lyla:</a> a slack bot to help with moderation record-keeping on the hack club slack!</p>
+						<p><a href="https://github.com/scherepi/cursedOS" class="underline">cursedOS:</a> a rust-based os a cool friend and i built!</p>
+					</div>
 				</div>
+
+				<div class="absolute top-[0%] right-[30%] w-[35%] h-[60%] z-30">
+					<div class="text-lg font-syne-mono leading-5 text-left">
+						<p class="mb-2"><a href="https://github.com/v1peridae/delist" class="underline">de.list:</a> a book recording website i built!</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/sense" class="underline">sense:</a> i was very frustrated with ynab app so i recreated it (kinda).</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/boba-around" class="underline">boba around:</a> do you love boba and wanna find boba shops near you? this does that</p>
+						<p class="mb-2"><a href="https://github.com/v1peridae/openjscad4all" class="underline">openjscad4all:</a> a browser extension that lets you make shapes with openjscad without needing to know how to code!</p>
+						<p><a href="https://github.com/v1peridae/jrnl" class="underline">jrnl:</a> a journaling app i built (because i love journaling)</p>
+						
+						<p class="mt-4 text-center text-xl">i love coding (especially web dev) and these are some of the projects i'm proud of making! you should check out my <a href="https://github.com/v1peridae" class="underline">github</a> for more!</p>
+					</div>
+				</div>
+			</div>
 		</div>
-		<img src="./src/assets/road.png" class="absolute bottom-0 right-0 w-auto h-auto max-h-[500px] z-20" />
+		<a href="https://youtu.be/P81hFLD7H2A?si=WVdOkiGLe3A60iOS" target="_blank" rel="noopener noreferrer">
+			<img src="./src/assets/label.png" class="absolute bottom-20 right-90 w-auto h-auto max-h-[80px] z-20" />
+		</a>
+		<a 
+			href="https://youtu.be/GvZVk690H4Q?si=6FXwVT7CtjOVBzbl" 
+			target="_blank" 
+			rel="noopener noreferrer"
+			onmouseenter="document.getElementById('birds-waterfall-audio').play().catch(() => {})" 
+			onmouseleave="document.getElementById('birds-waterfall-audio').pause(); document.getElementById('birds-waterfall-audio').currentTime = 0;"
+		>
+			<img src="./src/assets/cutout1.png" class="absolute bottom-0 right-0 w-auto h-auto max-h-full z-20" />
+		</a>
+		<audio id="birds-waterfall-audio" src={birbAudio} preload="auto"></audio>
 	</div>
 </Layout>
