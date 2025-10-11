@@ -4,9 +4,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+  base: '/v1peridae.me',
   server: {
     host: true, 
   },
+  site: 'https://v1peridae.me',
   vite: {
     plugins: [tailwindcss()],
     server: {
