@@ -12,9 +12,10 @@ export default defineConfig({
     server: {
       host: true,
       allowedHosts: [
-        "uncontortive-addie-unenriched.ngrok-free.dev",
         "localhost",
-        "127.0.0.1"
+        "127.0.0.1",
+        "v1peridae.conduit.ws",
+        "conduit.ws"
       ]
     },
   },
