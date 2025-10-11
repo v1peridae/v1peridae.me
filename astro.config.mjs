@@ -8,7 +8,6 @@ export default defineConfig({
     host: true, 
   },
   site: 'https://v1peridae.me',
-  base: '/v1peridae.me',
   vite: {
     plugins: [tailwindcss()],
     server: {
