@@ -1,5 +1,24 @@
 ---
 import '../styles/global.css'
+
+export interface Props {
+	title?:string
+	description?:string
+	image?:string
+	url?:string
+	type?: string;
+}
+	const {	
+		title = "v1peridae's asylum",
+		description = "hi, i'm lou! this is where i yap from time to time and just have a lil space for myself on the web :P  .",
+		image = "/home_bg.webp",
+		url = "https://v1peridae.me",
+		type = "website"
+	} = Astro.props
+	
+	const fullUrl = url.startsWith('http') ? url : `https://v1peridae.me${url}`;
+    const fullImage = image.startsWith('http') ? image : `https://v1peridae.me${image}`;
+
 ---
 
 <!doctype html>
@@ -8,8 +27,18 @@ import '../styles/global.css'
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>v1peridae's asylum</title>
+		<title>{title}</title>
+				<meta name="description" content={description} />
+		<meta name="author" content="lou (v1peridae)" />
 		
+		<meta name="robots" content="nofollow, noarchive, nosnippet" />
+		
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={fullUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullImage} />
+		<meta property="og:site_name" content="v1peridae's asylum" />		
 		<link rel="preload" href="/Avara-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/SyneMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 	</head>
