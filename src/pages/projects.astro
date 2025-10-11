@@ -4,10 +4,10 @@ import birbAudio from '../assets/birb.mp3'
 ---
 
 <Layout>	
-	<div class="fixed inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('./src/assets/projects_bg.png');">
+	<div class="fixed inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('/projects_bg.png');">
 		<div class="h-screen w-screen flex items-center justify-center relative z-10 text-[#4C4B46]">
 			<div class="relative">
-				<img src="./src/assets/book.png" class="w-auto max-h-[80%] relative left-[-130px] top-[-50px]" />
+				<img src="/book.png" class="w-auto max-h-[80%] relative left-[-130px] top-[-50px]" />
 				
 				<div class="absolute top-[0%] -left-[4%] w-[35%] h-[60%] z-30">
 					
@@ -39,7 +39,7 @@ import birbAudio from '../assets/birb.mp3'
 			</div>
 		</div>
 		<a href="https://youtu.be/P81hFLD7H2A?si=WVdOkiGLe3A60iOS" target="_blank" rel="noopener noreferrer">
-			<img src="./src/assets/label.png" class="absolute bottom-20 right-90 w-auto h-auto max-h-[80px] z-20" />
+			<img src="/label.png" class="absolute bottom-20 right-90 w-auto h-auto max-h-[80px] z-20" />
 		</a>
 		<a 
 			href="https://youtu.be/GvZVk690H4Q?si=6FXwVT7CtjOVBzbl" 
@@ -48,7 +48,7 @@ import birbAudio from '../assets/birb.mp3'
 			onmouseenter="document.getElementById('birds-waterfall-audio').play().catch(() => {})" 
 			onmouseleave="document.getElementById('birds-waterfall-audio').pause(); document.getElementById('birds-waterfall-audio').currentTime = 0;"
 		>
-			<img src="./src/assets/cutout1.png" class="absolute bottom-0 right-0 w-auto h-auto max-h-full z-20" />
+			<img src="/cutout1.png" class="absolute bottom-0 right-0 w-auto h-auto max-h-full z-20" />
 		</a>
 		<audio id="birds-waterfall-audio" src={birbAudio} preload="auto"></audio>
 	</div>
