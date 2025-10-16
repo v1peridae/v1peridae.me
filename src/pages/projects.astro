@@ -48,7 +48,7 @@ import birbAudio from '../assets/birb.mp3'
 			onmouseenter="document.getElementById('birds-waterfall-audio').play().catch(() => {})" 
 			onmouseleave="document.getElementById('birds-waterfall-audio').pause(); document.getElementById('birds-waterfall-audio').currentTime = 0;"
 		>
-			<img src="/cutout1.webp" class="absolute bottom-0 right-0 w-auto h-auto max-h-full z-20" />
+			<img src="/cutout1.webp" class="absolute bottom-0 right-0 w-auto h-auto max-h-full z-20 transform rotate-180" />
 		</a>
 		<audio id="birds-waterfall-audio" src={birbAudio} preload="auto"></audio>
 	</div>
